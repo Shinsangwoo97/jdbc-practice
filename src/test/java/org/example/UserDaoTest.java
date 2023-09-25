@@ -18,7 +18,7 @@ public class UserDaoTest {
         DatabasePopulatorUtils.execute(populator, ConnectionManager.getDataSource());
     }
 
-@Test
+    @Test
     void createTest() throws SQLException {
         UserDao userDao = new UserDao();
 
@@ -26,5 +26,5 @@ public class UserDaoTest {
 
         User user = userDao.findByUserId("wizard");
         assertThat(user).isEqualTo(new User("wizard", "password", "name", "email"));
-}
+    }
 }
